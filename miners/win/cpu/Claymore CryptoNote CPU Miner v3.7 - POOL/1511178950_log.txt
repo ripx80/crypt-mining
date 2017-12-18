@@ -1,0 +1,12 @@
+12:55:50:837	1a58	
+12:55:50:837	1a58	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:55:50:837	1a58	บ              Claymore CryptoNote CPU Miner v3.7                บ
+12:55:50:853	1a58	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:55:51:072	1a58	XMR: 1 pool is specified
+12:55:51:087	1a58	Main pool is pool.minexmr.com:4444
+12:55:51:087	1a58	64-bit version
+12:55:51:134	1a58	CPU supports AES-NI - faster mining!
+12:55:51:134	1a58	Logical CPU cores: 4
+12:55:51:150	1a58	Number of threads: Autoselection...
+12:55:51:150	1a58	Using 3 threads
+12:55:51:165	1a58	scfg: 1

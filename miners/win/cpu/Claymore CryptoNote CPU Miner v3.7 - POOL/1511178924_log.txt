@@ -1,0 +1,12 @@
+12:55:24:658	20f4	
+12:55:24:673	20f4	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:55:24:673	20f4	บ              Claymore CryptoNote CPU Miner v3.7                บ
+12:55:24:673	20f4	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:55:24:892	20f4	XMR: 1 pool is specified
+12:55:24:908	20f4	Main pool is pool.minexmr.com:4444
+12:55:24:908	20f4	64-bit version
+12:55:24:923	20f4	CPU supports AES-NI - faster mining!
+12:55:24:939	20f4	Logical CPU cores: 4
+12:55:24:939	20f4	Number of threads: Autoselection...
+12:55:24:939	20f4	Using 3 threads
+12:55:25:002	20f4	scfg: 1

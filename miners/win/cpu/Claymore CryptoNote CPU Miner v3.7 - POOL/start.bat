@@ -1,0 +1,4 @@
+NsCpuCNMiner64
+
+pause
+

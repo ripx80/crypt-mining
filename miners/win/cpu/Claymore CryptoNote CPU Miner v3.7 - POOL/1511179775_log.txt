@@ -1,0 +1,84 @@
+13:09:35:694	fd0	
+13:09:35:726	fd0	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+13:09:35:741	fd0	บ              Claymore CryptoNote CPU Miner v3.7                บ
+13:09:35:741	fd0	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+13:09:35:967	fd0	XMR: 1 pool is specified
+13:09:35:983	fd0	Main pool is pool.minexmr.com:4444
+13:09:35:998	fd0	64-bit version
+13:09:35:998	fd0	CPU supports AES-NI - faster mining!
+13:09:35:998	fd0	Logical CPU cores: 4
+13:09:36:014	fd0	Number of threads: Autoselection...
+13:09:36:014	fd0	Using 3 threads
+13:09:36:077	fd0	scfg: 1
+13:09:36:092	fd0	No AMD cards in the list, ADL library will not be used.
+13:09:36:108	fd0	1 pool specified.
+13:09:36:124	fd0	Remote management (READ-ONLY MODE) is enabled on port 3333
+13:09:36:139	fd0	Press "s" key for statistics.
+13:09:36:305	147c	Stratum - connecting to 'pool.minexmr.com' <94.23.206.130> port 4444 (unsecure)
+13:09:36:336	1558	send: {"method": "login", "params": {"login": "47mr7jYTroxQMwdKoPQuJoc9Vs9S9qCUAL6Ek4qyNFWJdqgBZRn4RYY2QjQfqEMJZVWPscupSgaqmUn1dpdUTC4fQsu3yjN", "pass": "x", "agent": "xmr/1.0"}, "id": 1}
+
+13:09:36:352	1558	Stratum - Connected (unsecure)
+13:09:36:368	147c	send: {"method": "login", "params": {"login": "42ATuGxCfG2eNvEG1WsSq83kptkcGQdDYerSDTg5pA8W5Fu4vyjzpfXFSojgZpoCQkeiFn87jDWS1WbgnPS25fVmR6sZ6CX.HP_Desk", "pass": "x", "agent": "xmr/1.0"}, "id": 1}
+
+13:09:36:368	147c	Stratum - Connected (unsecure)
+13:09:36:383	147c	New connection: reset total hashes counters
+13:09:36:383	1558	DevFee: Pool Diff 15000
+13:09:36:430	147c	got 303 bytes
+13:09:36:430	147c	buf: {"id":1,"jsonrpc":"2.0","error":null,"result":{"id":"247684037198179","job":{"blob":"0606ca8acbd00500344a2602843a507348c473d11831fa797467dd88c98c3fa721c44d25fd6e8e000000009d95e715159585a94151d6113dffde7be1a1b15917525c6e39d11a77ff568ae006","job_id":"480352907712864","target":"7b5e0400"},"status":"OK"}}
+
+13:09:36:430	147c	parse packet: 303
+13:09:36:430	147c	new buf size: 0
+13:09:36:430	147c	Pool Diff 15000
+13:09:36:446	147c	df has same pool, skip
+13:09:46:837	1558	got 253 bytes
+13:09:46:837	1558	buf: {"jsonrpc":"2.0","method":"job","params":{"blob":"0606888ccbd00596f8db509e62e8ab2ec86bc5e17a253bb67a63b042a423d3c4f136d21cff4bac00000000dc53cd631b1c81ff8631f7150518981c6f64b487afba0d0c2c934084d67edbc60e","job_id":"657678866369584","target":"7b5e0400"}}
+
+13:09:46:837	1558	parse packet: 253
+13:09:46:837	1558	new buf size: 0
+13:09:46:837	1558	DevFee: 11/20/17-13:09:46 - New job received from pool.minexmr.com:4444
+13:09:46:899	147c	got 253 bytes
+13:09:46:899	147c	buf: {"jsonrpc":"2.0","method":"job","params":{"blob":"0606888ccbd00596f8db509e62e8ab2ec86bc5e17a253bb67a63b042a423d3c4f136d21cff4bac000000005cc0f69f37d55c0525d4ff381d681f3b1cc6cef5805f27e822f461c8986d04f10e","job_id":"705335947031690","target":"7b5e0400"}}
+
+13:09:46:899	147c	parse packet: 253
+13:09:46:899	147c	new buf size: 0
+13:09:46:899	147c	df has same pool, skip
+13:09:46:915	147c	11/20/17-13:09:46 - New job received from pool.minexmr.com:4444
+13:09:46:915	147c	Speed: 210 h/s, TotalHashes: 2K, DevHashes: 0K Mining time:
+13:09:46:915	147c	00:00
+13:10:06:243	fd0	watchdog - thread 0, hb time 140
+13:10:06:243	fd0	watchdog - thread 1, hb time 156
+13:10:06:243	fd0	watchdog - thread 2, hb time 109
+13:10:14:962	1470	round found 1 shares
+13:10:14:978	147c	11/20/17-13:10:14 - SHARE FOUND (target 15000) - (THR 2 of 3)
+13:10:14:993	147c	send: {"method": "submit", "params": {"id": "247684037198179", "job_id": "705335947031690", "nonce": "0f170000", "result": "906e433ff0f05532f1bd7a6b763bc2e12bb999696f409a1708c7602f38790000"}, "id":4}
+
+13:10:15:071	147c	got 63 bytes
+13:10:15:071	147c	buf: {"id":4,"jsonrpc":"2.0","error":null,"result":{"status":"OK"}}
+
+13:10:15:071	147c	parse packet: 63
+13:10:15:071	147c	Share accepted (62 ms)!
+13:10:15:071	147c	new buf size: 0
+13:10:28:165	6a4	Speed: 216 h/s, TotalHashes: 10K, DevHashes: 0K Mining time:
+13:10:28:212	6a4	00:00
+13:10:29:134	147c	got 253 bytes
+13:10:29:134	147c	buf: {"jsonrpc":"2.0","method":"job","params":{"blob":"0606888ccbd00596f8db509e62e8ab2ec86bc5e17a253bb67a63b042a423d3c4f136d21cff4bac00000000df0ed952ab4a60cd10e0309c1a69f4b55837ad94728798a52e7532b763020a330e","job_id":"412366371303522","target":"a7e90200"}}
+
+13:10:29:134	147c	parse packet: 253
+13:10:29:134	147c	new buf size: 0
+13:10:29:134	147c	df has same pool, skip
+13:10:29:150	147c	11/20/17-13:10:29 - New job received from pool.minexmr.com:4444
+13:10:29:150	147c	Speed: 222 h/s, TotalHashes: 10K, DevHashes: 0K Mining time:
+13:10:29:150	147c	00:00
+13:10:33:821	1474	round found 1 shares
+13:10:33:837	147c	11/20/17-13:10:33 - SHARE FOUND (target 22500) - (THR 1 of 3)
+13:10:33:837	147c	send: {"method": "submit", "params": {"id": "247684037198179", "job_id": "412366371303522", "nonce": "88030000", "result": "6e1d9d238de16ab52b9e1e8263b44c931575998eecbe2f061453ef0cefc60200"}, "id":4}
+
+13:10:33:900	147c	got 63 bytes
+13:10:33:900	147c	buf: {"id":4,"jsonrpc":"2.0","error":null,"result":{"status":"OK"}}
+
+13:10:33:900	147c	parse packet: 63
+13:10:33:900	147c	Share accepted (62 ms)!
+13:10:33:915	147c	new buf size: 0
+13:10:36:306	fd0	watchdog - thread 0, hb time 188
+13:10:36:306	fd0	watchdog - thread 1, hb time 63
+13:10:36:306	fd0	watchdog - thread 2, hb time 203
