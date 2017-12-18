@@ -1,0 +1,5 @@
+#!/bin/bash
+test -x /usr/bin/screen || pacman -S screen --noconfirm
+/usr/bin/screen -dmS sm bash -c '/usr/share/sm/sm.sh; exec bash'
+exit 0
+
