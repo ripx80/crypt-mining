@@ -1,5 +1,6 @@
 #!/bin/bash
 test -x /usr/bin/screen || pacman -S screen --noconfirm
+test -e /usr/lib/libuv.so || pacman -S libuv --noconfirm
 /usr/bin/screen -dmS sm bash -c '/usr/share/sm/sm.sh; exec bash'
 exit 0
 
