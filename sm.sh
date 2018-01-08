@@ -10,6 +10,7 @@
 #
 #   IntenseCoin (iz5cPhcvqFVazGf9ctBBFdQ963BE2FQLzUfAW776qaGtafphiWDCvheWm3AiyU15dditqGh16XmEoNzy9q7wNYge3BqmFwQk4)
 #   stratum+tcp://itns.easyhash.io:3730
+#   stratum+tcp://pool.intense.hashvault.pro:80
 #
 #   Electroneum (etnkB19FztN5jjeYsjASMeYTRQtDz5UefbcH3rpJ6EoeRMn19rwbAo83kMUznTJSrA8myJKCBKTTb1QkCmfPEhSC3V7ds5WWf9)
 #   stratum+tcp://etn.easyhash.ko:3630
@@ -17,9 +18,9 @@
 #   Sumokoin
 #   stratum+tcp://sumo.easyhash.io:3330
 
-POOL="stratum+tcp://itns.easyhash.io"
+POOL="stratum+tcp://pool.intense.hashvault.pro"
 # PORTS: 3333, 4444, 5555, 7777
-PORT=3730
+PORT=80
 ADDR="iz5cPhcvqFVazGf9ctBBFdQ963BE2FQLzUfAW776qaGtafphiWDCvheWm3AiyU15dditqGh16XmEoNzy9q7wNYge3BqmFwQk4"
 WORKER=""
 #WORKER="$(hostname):8569826187d"
@@ -33,7 +34,7 @@ PP=$(dirname `realpath $0`)
 
 if [ $HUGEPAGES -eq 1 ]
   then
-	echo 128 > /proc/sys/vm/nr_hugepages
+    echo 128 > /proc/sys/vm/nr_hugepages
 fi
 sysctl -w vm.nr_hugepages=128
 
@@ -41,12 +42,12 @@ if [ "${TYPE}" == "linux/cpu" ]
 then
    if [ "${MINER}" == "minerd" ] || [ "${MINER}" == "xmrig" ]
     then
-	#echo "POOL:  $POOL"
-	#echo "MINER: $MINER"
-	${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR} -p x -t${THREADS}
-#	${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -p ${WORKER} -t${THREADS}
+    #echo "POOL:  $POOL"
+    #echo "MINER: $MINER"
+    ${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR} -p x -t${THREADS}
+#   ${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -p ${WORKER} -t${THREADS}
     else
-	echo "Miner not implemented"
+    echo "Miner not implemented"
     fi
 else
   echo "GPU not implemented"
@@ -54,7 +55,7 @@ fi
 
 if [ $HUGEPAGES -eq 1 ]
   then
-	sysctl -w vm.nr_hugepages=0
-	echo 0 > /proc/sys/vm/nr_hugepages
+    sysctl -w vm.nr_hugepages=0
+    echo 0 > /proc/sys/vm/nr_hugepages
 fi
 exit 0
