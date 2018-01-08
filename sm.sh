@@ -21,12 +21,14 @@ POOL="stratum+tcp://itns.easyhash.io"
 # PORTS: 3333, 4444, 5555, 7777
 PORT=3730
 ADDR="iz5cPhcvqFVazGf9ctBBFdQ963BE2FQLzUfAW776qaGtafphiWDCvheWm3AiyU15dditqGh16XmEoNzy9q7wNYge3BqmFwQk4"
-WORKER="$(hostname):8569826187d"
+WORKER=""
+#WORKER="$(hostname):8569826187d"
 THREADS="$(nproc)"
 HUGEPAGES=1
 TYPE="linux/cpu"
 # MINER: xmrig minerd
 MINER="minerd"
+DIFF="5000"
 PP=$(dirname `realpath $0`)
 
 if [ $HUGEPAGES -eq 1 ]
@@ -41,7 +43,8 @@ then
     then
 	#echo "POOL:  $POOL"
 	#echo "MINER: $MINER"
-	${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -p ${WORKER} -t${THREADS}
+	${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR} -p x -t${THREADS}
+#	${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -p ${WORKER} -t${THREADS}
     else
 	echo "Miner not implemented"
     fi
