@@ -4,29 +4,29 @@
 # Supported cryptonight algo
 # https://easyhash.io/
 # POOLS:
-#   Monero
-#   stratum+tcp://pool.supportxmr.com
+#   Monero (42ATuGxCfG2eNvEG1WsSq83kptkcGQdDYerSDTg5pA8W5Fu4vyjzpfXFSojgZpoCQkeiFn87jDWS1WbgnPS25fVmR6sZ6CX)
+#   stratum+tcp://pool.supportxmr.com:5555
 #   stratum+tcp://pool.minexmr.com
 #
-#   IntenseCoin
-#   stratum+tcp://itns.easyhash.io:3730#   
+#   IntenseCoin (iz5cPhcvqFVazGf9ctBBFdQ963BE2FQLzUfAW776qaGtafphiWDCvheWm3AiyU15dditqGh16XmEoNzy9q7wNYge3BqmFwQk4)
+#   stratum+tcp://itns.easyhash.io:3730
 #
-#   Electroneum
+#   Electroneum (etnkB19FztN5jjeYsjASMeYTRQtDz5UefbcH3rpJ6EoeRMn19rwbAo83kMUznTJSrA8myJKCBKTTb1QkCmfPEhSC3V7ds5WWf9)
 #   stratum+tcp://etn.easyhash.ko:3630
 #
 #   Sumokoin
 #   stratum+tcp://sumo.easyhash.io:3330
-POOL="stratum+tcp://pool.supportxmr.com"
-#POOL="stratum+tcp://pool.minexmr.com"
+
+POOL="stratum+tcp://itns.easyhash.io"
 # PORTS: 3333, 4444, 5555, 7777
-PORT=5555
-ADDR="42ATuGxCfG2eNvEG1WsSq83kptkcGQdDYerSDTg5pA8W5Fu4vyjzpfXFSojgZpoCQkeiFn87jDWS1WbgnPS25fVmR6sZ6CX"
+PORT=3730
+ADDR="iz5cPhcvqFVazGf9ctBBFdQ963BE2FQLzUfAW776qaGtafphiWDCvheWm3AiyU15dditqGh16XmEoNzy9q7wNYge3BqmFwQk4"
 WORKER="$(hostname):8569826187d"
 THREADS="$(nproc)"
 HUGEPAGES=1
 TYPE="linux/cpu"
 # MINER: xmrig minerd
-MINER="xmrig"
+MINER="minerd"
 PP=$(dirname `realpath $0`)
 
 if [ $HUGEPAGES -eq 1 ]
