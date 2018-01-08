@@ -1,0 +1,9 @@
+[Unit]
+Description=restart the rc-local service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl restart rc-local.service
+
+[Install]
+WantedBy=multi-user.target
