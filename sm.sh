@@ -22,8 +22,8 @@ POOL="stratum+tcp://pool.intense.hashvault.pro"
 # PORTS: 3333, 4444, 5555, 7777
 PORT=80
 ADDR="iz5cPhcvqFVazGf9ctBBFdQ963BE2FQLzUfAW776qaGtafphiWDCvheWm3AiyU15dditqGh16XmEoNzy9q7wNYge3BqmFwQk4"
-WORKER="$(hostname)"
-#WORKER="$(hostname):8569826187d"
+#WORKER="$(hostname)"
+WORKER="$(hostname):8569826187d"
 THREADS="$(nproc)"
 HUGEPAGES=1
 TYPE="linux/cpu"
