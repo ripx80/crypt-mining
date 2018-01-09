@@ -22,7 +22,7 @@ POOL="stratum+tcp://pool.intense.hashvault.pro"
 # PORTS: 3333, 4444, 5555, 7777
 PORT=80
 ADDR="iz5cPhcvqFVazGf9ctBBFdQ963BE2FQLzUfAW776qaGtafphiWDCvheWm3AiyU15dditqGh16XmEoNzy9q7wNYge3BqmFwQk4"
-WORKER=""
+WORKER="$(hostname)"
 #WORKER="$(hostname):8569826187d"
 THREADS="$(nproc)"
 HUGEPAGES=1
@@ -44,7 +44,7 @@ then
     then
     #echo "POOL:  $POOL"
     #echo "MINER: $MINER"
-    ${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR} -p x -t${THREADS}
+    ${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR} -p ${WORKER} -t${THREADS}
 #   ${PP}/miners/${TYPE}/${MINER}/${MINER} -o ${POOL}:${PORT} -u ${ADDR}.${WORKER} -p ${WORKER} -t${THREADS}
     else
     echo "Miner not implemented"
