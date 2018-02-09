@@ -21,10 +21,10 @@
 #   Leviarcoin (LpoFqNn7xCKXj2oavYajrh3xF1cNpMzBmSWFgwABuGTTh1uxHYU6ZUKcrUaWA8fF6MirD3p1XkHuP4Z1C1cfcyp546fdaA2)
 #   stratum+tcp://pool.leviarcoin.hashvault.pro:5555
 
-POOL="stratum+tcp://pool.leviarcoin.hashvault.pro"
+POOL="stratum+tcp://pool.supportxmr.com"
 # PORTS: 3333, 4444, 5555, 7777
 PORT=5555
-ADDR="LpoFqNn7xCKXj2oavYajrh3xF1cNpMzBmSWFgwABuGTTh1uxHYU6ZUKcrUaWA8fF6MirD3p1XkHuP4Z1C1cfcyp546fdaA2"
+ADDR="42ATuGxCfG2eNvEG1WsSq83kptkcGQdDYerSDTg5pA8W5Fu4vyjzpfXFSojgZpoCQkeiFn87jDWS1WbgnPS25fVmR6sZ6CX"
 #WORKER="$(hostname)"
 WORKER="$(hostname):8569826187d"
 THREADS="$(nproc)"
